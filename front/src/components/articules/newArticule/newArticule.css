@@ -1,0 +1,101 @@
+.articuleForm-title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 50%;
+}
+
+.label-input {
+  margin-top: 20px;
+}
+
+.articuleForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 30px;
+  align-items: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-size: 20px;
+  /* background-color: rgba(234, 242, 10, 0.1); */
+}
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  font: inherit;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  outline: none;
+  padding-block: 5px;
+}
+
+.text-area {
+  font: inherit;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  background-color: rgba(189, 183, 107, 0.5);
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  outline: none;
+  padding-block: 5px;
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.input::placeholder {
+  color: inherit;
+  transition: opacity 0.25%;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+.border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fbff00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25%;
+}
+
+.input:focus + .border,
+.input:valid + .border {
+  transform: scaleX(1);
+}
+
+.photo-label {
+  cursor: pointer;
+}
+
+.icon {
+  margin: 1rem;
+}
+
+.photo-input {
+  display: none;
+}
+
+.photo-text {
+  color: #15b110;
+}
+
+@media (max-width: 760px) {
+  .text-area {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+}
